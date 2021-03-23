@@ -1,0 +1,9 @@
+sudo useradd -r --home-dir /opt/mongodb mongodb
+cd /opt/
+
+sudo -R chown mongodb.mongodb mongodb/
+ls -l
+sudo -R chown mongodb.mongodb /var/lib/mongodb/
+
+sudo su mongodb
+mongodb/bin/mongod --dbpath /var/lib/mongodb/

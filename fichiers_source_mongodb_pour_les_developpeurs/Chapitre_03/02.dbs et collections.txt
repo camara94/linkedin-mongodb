@@ -1,0 +1,29 @@
+mongo
+
+show dbs
+use v2b
+
+db.formations.insert({"titre":"Découverte de MongoDB"})
+show dbs
+show collections
+
+exit
+
+cd /var/lib/mongodb/
+ls -lh
+
+mongo
+use v2b
+db.stats()
+db.formations.stats()
+db.formations.find()
+db.formations.find().pretty()
+
+db.formations.drop()
+show collections
+db
+db.dropDatabase()
+db
+show dbs
+exit
+ls

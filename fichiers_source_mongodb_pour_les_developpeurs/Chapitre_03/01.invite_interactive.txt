@@ -1,0 +1,13 @@
+sudo ln -s /opt/mongodb/bin/mongo /usr/bin/mongo 
+
+mongo
+mongo --host localhost --port 27017
+
+db
+
+show dbs
+use plouf
+db
+
+show collections
+exit

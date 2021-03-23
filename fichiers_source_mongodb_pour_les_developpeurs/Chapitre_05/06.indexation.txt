@@ -1,0 +1,12 @@
+db.formations.find({"formateur":"Yves Chatain"}, {"_id":0})
+db.formations.find({"formateur":"Yves Chatain"}, {"_id":0}).explain()
+
+db.formations.ensureIndex({"formateur":1})
+db.formations.find({"formateur":"Yves Chatain"}, {"_id":0}).explain()
+
+db.formations.dropIndex({"formateur":1})
+db.formations.find({"formateur":"Yves Chatain"}, {"_id":0})
+
+db.formations.ensureIndex({"formateur":1}, {background:1})
+db.formations.ensureIndex({"formateur":1}, {background:1, sparse:1})
+db.formations.ensureIndex({"formateur":1}, {background:1, sparse:1, unique:1})

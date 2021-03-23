@@ -1,0 +1,6 @@
+db.monuments.save({ "_id": "eiffel", "loc": {"lon":2.29510, "lat":48.857910}, "nom": "Tour Eiffel"});
+db.monuments.save({ "_id": "liberty", "loc": {"lon":-74.0447, "lat":40.6894}, "nom": "Statue de la Liberté"});
+
+db.monuments.ensureIndex({"loc": "2d"});
+
+db.monuments.find({ loc: { $nearSphere: [-74,48] }});

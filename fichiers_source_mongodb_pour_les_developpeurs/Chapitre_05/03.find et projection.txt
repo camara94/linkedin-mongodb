@@ -1,0 +1,5 @@
+db.formations.find({}, {"_id":0}).limit(1).pretty()
+db.formations.find({date_parution:'26/09/12'})
+db.formations.find({date_parution:'26/09/12'}, {"_id":0})
+db.formations.find({date_parution:'26/09/12'}, {formateur:1, titre:1})
+db.formations.find({date_parution:'26/09/12'}, {formateur:1, titre:1, "_id":0})

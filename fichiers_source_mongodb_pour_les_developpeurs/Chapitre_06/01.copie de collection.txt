@@ -1,0 +1,3 @@
+db.formations.copyTo("formations_temp")
+
+db.formations_temp.find({date_parution: { $exists:true }}).count()

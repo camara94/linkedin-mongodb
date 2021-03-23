@@ -1,0 +1,47 @@
+
+./mongod --dbpath chemindelabasededonnees
+
+comment créer un utilisateur mongodb
+
+useradd -r --home-dir /opt/mongodb mongodb
+cd /opt
+changer le propriétaire
+sudo chown -R mongodb.mongodb mongodb/
+puis vérifie
+ls -l
+
+même chose pour
+sudo chown -R mongodb.mongodb /var/lib/mongodb/
+
+tester 
+sudo su mongodb
+ensuit je vais lancer
+mongodb/bin/mongod --dbpath /var/lib/mongodb/
+
+ajouter mongdb sur un service
+sudo curl -O https://github.com/mongodb/mongo/blob/master/debian/mongod.conf
+
+je crée un repertoire 
+mkdir /var/log/mongodb
+
+changer le propriétaire
+chown -R mongodb.mongodb /var/log/mongodb
+
+je vais recuperer le init.d
+cd /etc/init.d
+curl -L https://github.com/mongodb/mongo/blob/master/debian/init.d -o mongod
+puis le rendre executable
+chmod a+x mongod
+
+puis je me rend dans le mongod
+nano mongod
+ensuite je change la valeur de DAEMON=/opt/mongodb/bin/mongod
+
+et enfin je demarre le service
+service mongod start
+
+
+
+
+
+

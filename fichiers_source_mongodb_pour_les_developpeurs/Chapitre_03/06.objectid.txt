@@ -1,0 +1,11 @@
+use v2b
+db.formations.insert({"titre":"Découverte de MongoDB"})
+db.formations.find()
+db.formations.findOne()
+db.formations.findOne()._id
+db.formations.findOne()._id.toString()
+db.formations.findOne()._id.getTimestamp()
+db.formations.findOne()._id.getTimestamp().toString()
+o = ObjectId()
+o.getTimestamp()
+o.getTimestamp().toString()

@@ -1,0 +1,6 @@
+db.formations.find()
+db.formations.findOne()
+db.formations.find().limit(1)
+db.formations.find().limit(1).pretty()
+db.formations.find().limit(10).sort( { formateur:1 } )
+db.formations.find().limit(10).sort( { formateur:1 } ).pretty()

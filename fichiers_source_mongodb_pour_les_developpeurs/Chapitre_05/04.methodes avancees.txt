@@ -1,0 +1,14 @@
+db.formations.find({titre:/NoSQL/})
+db.formations.find({titre:/nosql/})
+db.formations.find({titre:/nosql/i})
+
+db.formations.find({formateur:/Aubry$/})
+db.formations.find({formateur:/^Christophe/})
+db.formations.find({formateur:/^Christophe/}).limit(1)
+db.formations.find({formateur:/^Christophe/}).limit(1).skip(1)
+
+db.formations.find({formateur:/^Christophe/}).count()
+db.formations.count({formateur:/^Christophe/})
+
+db.formations.distinct("formateur")
+db.formations.distinct("formateur").sort()

@@ -1,0 +1,15 @@
+mongo v2b
+
+db.formations.insert({"titre":"Découverte des bases de données NoSQL"})
+db.formations.insert({"titre":"Découverte des bases de données NoSQL"})
+db.formations.find()
+db.formations.insert({"_id":"FR_413", "titre":"Découverte des bases de données NoSQL"})
+db.formations.insert({"_id":"FR_413", "titre":"Découverte des bases de données NoSQL"})
+
+db.formations.save({"_id":"FR_413", "titre":"Découverte des bases de données NoSQL"})
+db.formations.save({"_id":"FR_413", "titre":"Découverte des bases de données NoSQL", "auteur":"Rudi Bruchez"})
+db.formations.save({"_id":"FR_414", "titre":"Découverte des bases de données NoSQL"})
+
+db.formations.remove({"_id":"FR_414"})
+db.formations.remove({"titre":"Découverte des bases de données NoSQL"}, 1)
+db.formations.remove({})

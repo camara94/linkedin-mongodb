@@ -1,0 +1,8 @@
+Sudo service start mongod
+Sudo service stop  mongod
+
+ps aux | grep mongo[d]
+
+sudo update-rc.d mongod defaults
+
+sudo ln -s /opt/mongodb/bin/mongo /usr/bin/mongo

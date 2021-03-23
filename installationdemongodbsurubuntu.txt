@@ -40,6 +40,10 @@ ensuite je change la valeur de DAEMON=/opt/mongodb/bin/mongod
 et enfin je demarre le service
 service mongod start
 
+Crée un lien symbolique pour pouvoir lancer mongodb partout
+
+ln -s /opt/mongodb/bin/mongo /usr/mongo
+
 
 
 

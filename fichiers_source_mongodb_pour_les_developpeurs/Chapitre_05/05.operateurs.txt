@@ -1,0 +1,6 @@
+# les opérateurs
+# http://docs.mongodb.org/manual/reference/operator/query/
+
+db.formations.find( { formateur: { $in: [ "Vincent Isoz", "Yves Chatain" ] } }, { "_id":0} )
+db.formations.find( { $or: [ {formateur:"Vincent Isoz"}, { titre:/Excel/ } ] }, { "_id":0} )
+db.formations.find( {formateur:"Vincent Isoz", titre:/Excel/ }, { "_id":0} )

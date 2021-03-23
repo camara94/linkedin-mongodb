@@ -1,0 +1,5 @@
+db.formations_temp.find({date_parution: { $exists:true }}, { "_id":0}).sort({titre:1}).limit(10)
+db.formations.find({date_parution: { $exists:true }}, { "_id":0}).sort({titre:1}).limit(10)
+
+db.formations_temp.findOne().date_parution.toLocaleDateString()
+db.formations_temp.findOne().date_parution.toLocaleTimeString()

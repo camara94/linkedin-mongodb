@@ -1,0 +1,8 @@
+/opt/mongodb/bin/mongoimport -d v2b -c formations --type csv --file formations.csv --headerline
+/opt/mongodb/bin/mongoimport -d v2b -c formations --type csv --file formations.csv --headerline --ignoreBlanks
+
+db.formations.update({"Date de parution":""}, {$unset: {"Date de parution":1}}, {multi: true})
+
+db.formations.update({}, {$rename: {"Date de parution":"date_parution", "Titres des formations":"titre", "Formateur":"formateur"}}, {multi: true})
+
+/opt/mongodb/bin/mongoexport -d v2b -c formations -o formations.json
